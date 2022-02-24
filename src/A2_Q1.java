@@ -1,16 +1,17 @@
 import java.util.*;
 
 public class A2_Q1 {
-	public static HashMap<Integer, Integer> allo = new HashMap<Integer, Integer>();
+	public static ArrayList<ArrayList<Integer>> coords = new ArrayList<ArrayList<Integer>>();
 	public static int[] game(String[][] board){
 		int[] game = {0,0};
 		for (int row = 0; row < board[0].length; row++) {
 			for (int col = 0; col < board.length; col++) {
 				if (board[row][col].equals("o")) {
-					board = oBeside(board, row, col);
-					if (board[row][col].equals("o")) {
-						game[0] ++;
-					} else game[1] ++;
+					ArrayList<Integer> single_coords = new ArrayList<Integer>();
+					single_coords.add(row);
+					single_coords.add(col);
+					coords.add(single_coords);
+
 				}
 			}
 		}
