@@ -19,9 +19,6 @@ public class A2_Q2 {
 		if (current_weight >= 1000) {
 			current_num = find_num2(current_num,current_weight);
 			return current_num;
-		} else if (list.isEmpty()) {
-			current_num = find_num2(current_num, current_weight);
-			return current_weight;
 		}
 		for (Integer i: list) {
 			ArrayList<Integer> removed_list = new ArrayList<>(list);
